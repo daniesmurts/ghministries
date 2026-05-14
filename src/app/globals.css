@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --color-surface-base:      #f9f9f9;
+    --color-surface-elevated:  #ffffff;
+    --color-surface-subtle:    #f2f2f4;
+    --color-surface-dark:      #0d0d10;
+
+    /* Brand */
+    --color-accent-purple:     #6344FF;
+    --color-accent-purple-10:  #6344FF1A;
+    --color-accent-purple-20:  #6344FF33;
+    --color-accent-orange:     #FF5C1A;
+    --color-accent-orange-10:  #FF5C1A1A;
+
+    /* Text */
+    --color-text-primary:      #0d0d10;
+    --color-text-secondary:    #5a5a6e;
+    --color-text-tertiary:     #9898aa;
+    --color-text-inverse:      #ffffff;
+
+    /* Borders */
+    --color-border:            #e8e8ec;
+    --color-border-strong:     #d0d0da;
+
+    /* Semantic */
+    --color-success:           #16a34a;
+    --color-error:             #dc2626;
+    --color-warning:           #d97706;
+
+    /* Effects */
+    --shadow-card:             0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    --shadow-elevated:         0 8px 40px rgba(0,0,0,0.10);
+
+    /* Typography */
+    --font-display: 'Manrope', sans-serif;
+    --font-body:    'Manrope', sans-serif;
+  }
+
+  body {
+    background-color: var(--color-surface-base);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-xs { font-size: 0.75rem; line-height: 1.5; font-weight: 500; }
+  .text-sm { font-size: 0.875rem; line-height: 1.6; font-weight: 400; }
+  .text-base { font-size: 1rem; line-height: 1.7; font-weight: 400; }
+  .text-lg { font-size: 1.125rem; line-height: 1.6; font-weight: 400; }
+  .text-xl { font-size: 1.25rem; line-height: 1.5; font-weight: 500; }
+  .text-2xl { font-size: 1.5rem; line-height: 1.4; font-weight: 600; }
+  .text-3xl { font-size: 1.875rem; line-height: 1.3; font-weight: 700; }
+  .text-4xl { font-size: 2.25rem; line-height: 1.2; font-weight: 700; }
+  .text-5xl { font-size: 3rem; line-height: 1.1; font-weight: 800; }
+  .text-6xl { font-size: 3.75rem; line-height: 1.05; font-weight: 800; }
+  .text-7xl { font-size: 4.5rem; line-height: 1.0; font-weight: 800; }
+}

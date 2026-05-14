@@ -1,0 +1,473 @@
+{
+  "Navbar": {
+    "Home": "Home",
+    "About": "About",
+    "Vision": "Vision",
+    "Leadership": "Leadership",
+    "Beliefs & Values": "Beliefs & Values",
+    "Ministries": "Ministries",
+    "Home Groups": "Home Groups",
+    "Media Library": "Media Library",
+    "Prayer Request": "Prayer Request",
+    "Join Us": "Join Us",
+    "Volunteering": "Volunteering",
+    "Careers": "Careers",
+    "Giving": "Giving",
+    "Global": "Global",
+    "Services": "Services",
+    "General": "General",
+    "Children": "Children",
+    "Teenagers": "Teenagers",
+    "Youth": "Youth",
+    "Seniors": "Seniors",
+    "National": "National",
+    "Store": "Store",
+    "Events Calendar": "Events Calendar",
+    "Contact": "Contact",
+    "Give": "Give",
+    "Give Now": "Give Now"
+  },
+  "Footer": {
+    "About": "About",
+    "Vision": "Vision",
+    "Leadership": "Leadership",
+    "Beliefs & Values": "Beliefs & Values",
+    "Ministries": "Ministries",
+    "Home Groups": "Home Groups",
+    "Media Library": "Media Library",
+    "Prayer Request": "Prayer Request",
+    "Events Calendar": "Events Calendar",
+    "Connect": "Connect",
+    "Global": "Global",
+    "Giving": "Giving",
+    "Volunteering": "Volunteering",
+    "Store": "Store",
+    "Contact": "Contact",
+    "Privacy Policy": "Privacy Policy",
+    "Terms": "Terms",
+    "Built with Purpose": "Built with Purpose"
+  },
+  "HeroSection": {
+    "title": "Where Heaven Meets Earth",
+    "subtitle": "Spirit-led. Mission-conscious. Kingdom-minded.",
+    "planVisit": "Plan Your Visit",
+    "watchSermon": "Watch This Week's Sermon"
+  },
+  "WelcomeSection": {
+    "eyebrow": "OUR HEART",
+    "quote": "\"We are not just building a church; we are raising an army of believers who will carry the culture of the Kingdom into every sphere of society.\"",
+    "role": "Lead Apostle"
+  },
+  "StatsSection": {
+    "years": "Years of Ministry",
+    "locations": "Global Locations",
+    "nations": "Nations Reached",
+    "gatherings": "Weekly Gatherings"
+  },
+  "VisionSnapshot": {
+    "quote": "\"The harvest is plentiful, but the workers are few. Ask the Lord of the harvest, therefore, to send out workers into his harvest field.\"",
+    "reference": "Matthew 9:37-38",
+    "description": "Our vision is to build a Spirit-empowered movement that transcends borders. We are dedicated to equipping believers to fulfill the Great Commission in every sphere of life.",
+    "readFull": "Read Our Full Vision"
+  },
+  "ServiceTimes": {
+    "eyebrow": "JOIN US",
+    "heading": "Service Times",
+    "subtext": "Experience powerful worship, transformational teaching, and authentic community.",
+    "getDirections": "Get Directions",
+    "services": {
+      "sundayMorning": {
+        "day": "Sunday Morning",
+        "language": "Russian (English Translation)"
+      },
+      "sundayEvening": {
+        "day": "Sunday Evening",
+        "language": "Russian"
+      },
+      "wednesday": {
+        "day": "Wednesday Midweek",
+        "language": "Russian (English Translation)"
+      }
+    }
+  },
+  "LatestSermons": {
+    "eyebrow": "WATCH & LISTEN",
+    "heading": "Latest Messages",
+    "visitLibrary": "Visit Media Library"
+  },
+  "UpcomingEvents": {
+    "eyebrow": "COMMUNITY",
+    "heading": "Upcoming Events",
+    "viewCalendar": "View Full Calendar"
+  },
+  "MinistriesGrid": {
+    "eyebrow": "GET INVOLVED",
+    "heading": "Ministries",
+    "subtext": "There is a place for you to serve, grow, and use your gifts for the Kingdom.",
+    "learnMore": "Learn More"
+  },
+  "GlobalTeaser": {
+    "eyebrow": "GLOBAL REACH",
+    "heading": "One Church.<br />Many Nations.",
+    "description": "From our headquarters in Moscow to over 40 locations worldwide, we are united by one vision: to see the Kingdom of God established in every nation.",
+    "seeAll": "See All Locations"
+  },
+  "Newsletter": {
+    "heading": "Stay Connected to the Movement",
+    "description": "Join our mailing list to receive weekly devotionals, ministry updates, and exclusive resources.",
+    "placeholderName": "Your Name",
+    "placeholderEmail": "Your Email Address",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing...",
+    "privacy": "We respect your privacy. Unsubscribe at any time.",
+    "successTitle": "Welcome to the family!",
+    "successDesc": "Your email has been successfully registered."
+  },
+  "VisionPage": {
+    "heroTitle": "The Harvest Mandate",
+    "heroReference": "Matthew 9:37-38",
+    "heroQuote": "\"The harvest is plentiful, but the workers are few. Ask the Lord of the harvest, therefore, to send out workers into his harvest field.\"",
+    "mandateEyebrow": "OUR MISSION",
+    "mandateHeading": "Building a Kingdom Culture",
+    "mandateText1": "Great Harvest Ministries is more than an organization; it is a spiritual movement birthed from a profound encounter with God's heart for the nations. Our calling is not simply to gather crowds, but to make disciples who can carry the culture of Heaven into every sphere of society.",
+    "mandateText2": "We believe that true transformation happens when believers are equipped with the uncompromised Word of God and the undeniable power of the Holy Spirit.",
+    "pillarsEyebrow": "CORE PILLARS",
+    "pillarsHeading": "How We Move",
+    "pillar1Title": "Spirit-led",
+    "pillar1Text": "We prioritize the presence and direction of the Holy Spirit above all strategies. Every decision, service, and outreach is born out of intimacy with God in prayer.",
+    "pillar2Title": "Mission-conscious",
+    "pillar2Text": "We exist for those who are not yet here. Our focus remains outward, consistently seeking to reach the lost and demonstrate the love of Christ in tangible ways.",
+    "pillar3Title": "Kingdom-minded",
+    "pillar3Text": "We look beyond our local congregation to the broader Body of Christ, partnering globally to see God's will done on earth as it is in heaven.",
+    "joinEyebrow": "PARTNERSHIP",
+    "joinHeading": "Join the Movement",
+    "joinText": "There is a place for you in this harvest. Discover how you can partner with us through prayer, serving, or financial generosity.",
+    "giveButton": "Give Securely",
+    "serveButton": "Find Serving Opportunities"
+  },
+  "LeadershipPage": {
+    "heroEyebrow": "OUR TEAM",
+    "heroTitle": "Global Apostolic Leadership",
+    "heroSubtitle": "Meet the men and women appointed to steward the vision and carry the mandate of Great Harvest Ministries across the nations.",
+    "tier1Title": "Apostolic Oversight",
+    "tier2Title": "Executive Team",
+    "viewBio": "View Full Bio",
+    "leaders": {
+      "apostleJohn": {
+        "name": "Apostle John Doe",
+        "role": "Founder & Lead Apostle",
+        "bio": "Apostle John has dedicated his life to equipping the saints for the work of the ministry. With over 20 years of apostolic oversight, he has planted churches across 15 nations and authored numerous books on Kingdom theology. His heart is to see every believer walk in their God-given authority and demonstrate the power of the Holy Spirit in their daily lives."
+      },
+      "pastorJane": {
+        "name": "Pastor Jane Smith",
+        "role": "Executive Pastor",
+        "bio": "Pastor Jane oversees the global operations of Great Harvest Ministries. Her passion for operational excellence and spiritual formation ensures that the movement remains both structurally sound and spiritually vibrant."
+      },
+      "pastorDavid": {
+        "name": "Pastor David Ivanov",
+        "role": "Campus Pastor, Moscow",
+        "bio": "Leading the flagship campus in Moscow, Pastor David carries a burning vision for urban revival and community transformation."
+      },
+      "pastorElena": {
+        "name": "Pastor Elena Popova",
+        "role": "Worship Director",
+        "bio": "Pastor Elena leads our global worship movement, cultivating atmospheres where people can encounter the presence of God deeply and authentically."
+      },
+      "pastorMarcus": {
+        "name": "Pastor Marcus Adebayo",
+        "role": "Missions Director",
+        "bio": "Driving our global outreach initiatives, Pastor Marcus coordinates church planting and humanitarian efforts in over 20 countries."
+      }
+    }
+  },
+  "BeliefsPage": {
+    "heroEyebrow": "OUR FOUNDATION",
+    "heroTitle": "Beliefs & Values",
+    "heroSubtitle": "The core theological convictions that anchor our movement and guide our mission.",
+    "sidebarTitle": "In this section",
+    "sections": {
+      "bible": {
+        "title": "The Bible",
+        "content": "We believe the Bible is the inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian beliefs and living."
+      },
+      "trinity": {
+        "title": "The Trinity",
+        "content": "We believe in one God, eternally existent in three persons: Father, Son, and Holy Spirit. Each person of the Trinity possesses equally all the attributes of deity."
+      },
+      "salvation": {
+        "title": "Salvation",
+        "content": "We believe that salvation is a free gift of God's grace, received through faith in Jesus Christ alone. It cannot be earned through human effort or good works."
+      },
+      "holySpirit": {
+        "title": "The Holy Spirit",
+        "content": "We believe in the present ministry of the Holy Spirit, whose indwelling enables the Christian to live a godly life and empowers them for service with spiritual gifts."
+      },
+      "church": {
+        "title": "The Church",
+        "content": "We believe the Church is the body of Christ, composed of all born-again believers. Its mission is to make disciples of all nations and demonstrate God's love to the world."
+      },
+      "eschatology": {
+        "title": "Eschatology",
+        "content": "We believe in the blessed hope: the personal, visible return of the Lord Jesus Christ to earth and the establishment of His kingdom."
+      }
+    }
+  },
+  "HomeGroupsPage": {
+    "heroEyebrow": "COMMUNITY",
+    "heroTitle": "Find Your People",
+    "heroSubtitle": "We believe that true life change happens in the context of authentic relationships. Find a home group near you.",
+    "filters": {
+      "allDays": "All Days",
+      "allAreas": "All Areas",
+      "allLanguages": "All Languages"
+    },
+    "groupCard": {
+      "leader": "Leader",
+      "capacity": "Capacity",
+      "statusOpen": "Open",
+      "statusWaitlist": "Waitlist"
+    },
+    "detail": {
+      "back": "Back to Home Groups",
+      "aboutGroup": "About This Group",
+      "aboutLeader": "About the Leader",
+      "meetingDetails": "Meeting Details",
+      "day": "Day",
+      "time": "Time",
+      "location": "Location",
+      "language": "Language",
+      "joinForm": {
+        "title": "Join This Group",
+        "description": "Fill out the form below and the group leader will contact you with more details.",
+        "name": "Your Name",
+        "email": "Your Email",
+        "phone": "Your Phone Number (Optional)",
+        "message": "Message to the Leader (Optional)",
+        "submit": "Request to Join",
+        "submitting": "Sending...",
+        "success": "Your request has been sent! The leader will contact you soon."
+      }
+    }
+  },
+  "MediaPage": {
+    "heroEyebrow": "RESOURCE LIBRARY",
+    "heroTitle": "Watch & Listen",
+    "heroSubtitle": "Access our full library of sermons, teaching series, and podcasts to grow in your faith.",
+    "searchPlaceholder": "Search by title, speaker, or series...",
+    "tabs": {
+      "all": "All",
+      "video": "Video",
+      "audio": "Audio",
+      "series": "Series"
+    },
+    "card": {
+      "watch": "Watch",
+      "listen": "Listen"
+    },
+    "detail": {
+      "back": "Back to Library",
+      "speaker": "Speaker",
+      "date": "Date",
+      "series": "Part of Series",
+      "share": "Share",
+      "description": "Description",
+      "related": "Related Messages"
+    }
+  },
+  "PrayerPage": {
+    "heroEyebrow": "WE ARE HERE FOR YOU",
+    "heroTitle": "How can we pray for you?",
+    "heroSubtitle": "Our intercessory team considers it an honor to stand with you in prayer and celebrate what God is doing in your life.",
+    "form": {
+      "typePrayer": "Prayer Request",
+      "typeQuestion": "Ask a Question",
+      "typeTestimony": "Share a Testimony",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Optional",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "Optional, required for replies",
+      "messageLabelPrayer": "How can we pray for you?",
+      "messageLabelQuestion": "What is your question?",
+      "messageLabelTestimony": "What has God done?",
+      "messagePlaceholder": "Type your message here...",
+      "privacyLabel": "Keep this private",
+      "privacyDesc": "Only our pastoral and intercessory teams will see this.",
+      "submitPrayer": "Submit Prayer Request",
+      "submitQuestion": "Submit Question",
+      "submitTestimony": "Submit Testimony",
+      "submitting": "Sending...",
+      "successTitle": "Message Received",
+      "successPrayer": "We are standing in faith with you. \"The prayer of a righteous person is powerful and effective.\" - James 5:16",
+      "successQuestion": "Thank you for reaching out. A team member will respond to your email soon.",
+      "successTestimony": "Praise God! We rejoice with you over what He has done."
+    }
+  },
+  "GivingPage": {
+    "heroEyebrow": "FINANCIAL PARTNERSHIP",
+    "heroTitle": "Fuel the Harvest",
+    "heroSubtitle": "Your generosity enables us to preach the gospel, plant churches, and serve communities across the globe.",
+    "scripture": "\"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.\" — 2 Corinthians 9:7",
+    "form": {
+      "oneTime": "One-Time",
+      "monthly": "Monthly",
+      "customAmount": "Custom",
+      "giveSecurely": "Give Securely",
+      "redirecting": "Redirecting..."
+    },
+    "trust": {
+      "secure": "Secure & Encrypted",
+      "registered": "Registered Organization",
+      "transparent": "Transparent Finances"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is my gift tax-deductible?",
+      "a1": "Yes, all donations are tax-deductible to the full extent of the law. You will receive an annual giving statement.",
+      "q2": "Can I give via wire transfer?",
+      "a2": "Yes. Please contact our finance team at finance@ghministries.com for wire transfer instructions.",
+      "q3": "How are the funds used?",
+      "a3": "Your giving goes directly to supporting our local church operations, global mission initiatives, and community outreach programs."
+    }
+  },
+  "VolunteeringPage": {
+    "heroEyebrow": "SERVE THE CITY",
+    "heroTitle": "Join a Dream Team",
+    "heroSubtitle": "God has given you unique gifts. Use them to make an eternal impact in our church and city.",
+    "filters": {
+      "allAreas": "All Areas",
+      "allCommitments": "All Commitments"
+    },
+    "card": {
+      "skills": "Skills needed",
+      "apply": "Apply Now"
+    },
+    "form": {
+      "title": "Application Form",
+      "description": "Tell us a bit about yourself and we will contact you about joining the team.",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "phoneLabel": "Phone Number",
+      "availabilityLabel": "Availability",
+      "messageLabel": "Why do you want to serve here?",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "success": "Application received! Our team leads will be in touch shortly."
+    }
+  },
+  "OpportunitiesPage": {
+    "heroEyebrow": "JOIN THE STAFF",
+    "heroTitle": "Careers & Opportunities",
+    "heroSubtitle": "We are always looking for passionate, Kingdom-minded individuals to join our team in Moscow.",
+    "tabs": {
+      "jobs": "Jobs",
+      "internships": "Internships",
+      "apprenticeships": "Apprenticeships"
+    },
+    "card": {
+      "fullTime": "Full-Time",
+      "partTime": "Part-Time",
+      "remote": "Remote"
+    },
+    "modal": {
+      "description": "Role Description",
+      "requirements": "Requirements",
+      "apply": "Apply for this role"
+    }
+  },
+  "GlobalPage": {
+    "heroEyebrow": "GLOBAL REACH",
+    "heroTitle": "One Church. Many Nations.",
+    "heroSubtitle": "We are a global family. Find a Great Harvest Ministries campus or partner church near you.",
+    "filters": {
+      "allRegions": "All Regions"
+    },
+    "sidebar": {
+      "title": "Our Locations",
+      "searchPlaceholder": "Search city or country..."
+    },
+    "card": {
+      "leadPastor": "Lead Pastor",
+      "serviceTimes": "Service Times",
+      "contact": "Contact",
+      "directions": "Get Directions"
+    },
+    "cta": {
+      "title": "Plant a Church With Us",
+      "subtitle": "God is moving across the earth. If you feel called to plant a Great Harvest Ministries campus in your city, we want to hear from you.",
+      "button": "Contact Us"
+    }
+  },
+  "StorePage": {
+    "heroEyebrow": "RESOURCES",
+    "heroTitle": "Great Harvest Ministries Store",
+    "heroSubtitle": "Books, study guides, and apparel to equip you for the harvest.",
+    "tabs": {
+      "all": "All",
+      "books": "Books",
+      "media": "Media",
+      "apparel": "Apparel"
+    },
+    "card": {
+      "addToCart": "Add to Cart"
+    },
+    "cart": {
+      "title": "Your Cart",
+      "empty": "Your cart is empty.",
+      "checkout": "Checkout",
+      "total": "Total",
+      "redirecting": "Redirecting to checkout...",
+      "success": "Order simulated successfully! (Phase 6 mockup)"
+    }
+  },
+  "EventsPage": {
+    "heroEyebrow": "WHAT'S HAPPENING",
+    "heroTitle": "Events Calendar",
+    "heroSubtitle": "Gatherings, conferences, and community moments across our locations.",
+    "toggle": {
+      "list": "List View",
+      "calendar": "Calendar View"
+    },
+    "card": {
+      "register": "Register Now"
+    },
+    "detail": {
+      "about": "About This Event",
+      "speakers": "Speakers",
+      "location": "Location",
+      "registrationForm": "Event Registration",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "guestsLabel": "Number of Guests (including you)",
+      "submit": "Complete Registration",
+      "submitting": "Registering...",
+      "success": "Registration successful! We've sent the details to your email."
+    }
+  },
+  "ContactPage": {
+    "heroEyebrow": "GET IN TOUCH",
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "We would love to hear from you. Reach out with questions, testimonies, or partnership inquiries.",
+    "info": {
+      "address": "Moscow Headquarters",
+      "addressLine": "Tverskaya St, 1, Moscow, Russia",
+      "phone": "+7 (495) 000-00-00",
+      "email": "hello@ghministries.com"
+    },
+    "form": {
+      "title": "Send a Message",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "subjectLabel": "Subject",
+      "subjects": {
+        "general": "General Inquiry",
+        "prayer": "Prayer Request",
+        "partnership": "Partnership",
+        "other": "Other"
+      },
+      "messageLabel": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We aim to respond within 2 business days."
+    }
+  }
+}
