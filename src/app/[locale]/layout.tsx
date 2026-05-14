@@ -79,6 +79,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${manrope.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-surface-base text-text-primary font-body">
         <NextIntlClientProvider messages={messages}>
