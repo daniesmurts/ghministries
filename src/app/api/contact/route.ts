@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error('[API/CONTACT] Error handling request:', error)
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ success: false, errors: error.errors }, { status: 400 })
+      return NextResponse.json({ success: false, errors: error.issues }, { status: 400 })
     }
     return NextResponse.json({ success: false, message: "Internal server error" }, { status: 500 })
   }
