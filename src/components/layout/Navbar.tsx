@@ -3,6 +3,7 @@ import * as React from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 import { ShoppingCart } from "lucide-react"
 
 import { Link, usePathname } from "@/i18n/routing"
@@ -72,8 +73,10 @@ export function Navbar() {
 
   // Close mobile menu on path change
   React.useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [pathname])
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false)
+    }
+  }, [pathname, mobileMenuOpen])
 
   return (
     <>
@@ -90,9 +93,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-purple rounded-sm lg:mr-8 xl:mr-12">
             <div className="relative h-10 w-10 md:h-12 md:w-12">
-              <img
+              <Image
                 src="/logo.png"
                 alt="Great Harvest Ministries Logo"
+                width={48}
+                height={48}
                 className="h-full w-full object-contain"
               />
             </div>
@@ -226,9 +231,11 @@ export function Navbar() {
             <div className="flex items-center justify-between mb-12">
             <Link href="/" className="flex items-center space-x-3" onClick={() => setMobileMenuOpen(false)}>
               <div className="relative h-10 w-10">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Great Harvest Ministries Logo"
+                  width={40}
+                  height={40}
                   className="h-full w-full object-contain mix-blend-multiply"
                 />
               </div>

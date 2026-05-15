@@ -1,8 +1,8 @@
-import { PortableText as SanityPortableText } from '@portabletext/react'
+import { PortableText as SanityPortableText, PortableTextComponents } from '@portabletext/react'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 
-const components = {
+const components: PortableTextComponents = {
   types: {
     image: ({ value }: any) => {
       return (
@@ -38,7 +38,7 @@ const components = {
            <iframe
             src={value.url}
             className="w-full h-full"
-            frameBorder="0"
+            frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

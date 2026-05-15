@@ -8,8 +8,9 @@ import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Link } from "@/i18n/routing"
 import { cn } from "@/lib/utils"
+import { SanityEvent } from "@/types/sanity"
 
-export default function EventsClient({ events }: { events: any[] }) {
+export default function EventsClient({ events }: { events: SanityEvent[] }) {
   const t = useTranslations('EventsPage')
   const [viewMode, setViewMode] = React.useState<"list" | "calendar">("list")
   const [currentDate, setCurrentDate] = React.useState(new Date())

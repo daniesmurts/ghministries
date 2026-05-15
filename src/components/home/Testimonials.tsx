@@ -2,7 +2,7 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Quote } from "lucide-react"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/Avatar"
 import { AnimatedSection } from "@/components/ui/AnimatedSection"
 
 const testimonials = [
@@ -71,7 +71,7 @@ export function Testimonials() {
                 className="absolute inset-0 flex flex-col items-center"
               >
                 <p className="font-display text-2xl md:text-3xl font-light text-text-primary leading-relaxed mb-8">
-                  "{testimonials[currentIndex].quote}"
+                  &quot;{testimonials[currentIndex].quote}&quot;
                 </p>
                 
                 <div className="flex items-center space-x-4">

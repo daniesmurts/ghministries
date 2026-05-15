@@ -13,12 +13,26 @@ import { Input } from "@/components/ui/Input"
 import { Link } from "@/i18n/routing"
 import { cn } from "@/lib/utils"
 import { PortableText } from "@/components/ui/PortableText"
+import { SanityEvent } from "@/types/sanity"
 
-export default function EventDetailClient({ event }: { event: any }) {
+export default function EventDetailClient({ event }: { event: SanityEvent }) {
   const t = useTranslations('EventsPage')
   
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [isSuccess, setIsSuccess] = React.useState(false)
+
+  const formSchema = z.object({
+    name: z.string().min(2, "Name is required"),
+    email: z.string().email("Valid email is required"),
+    guests: z.number().min(1).max(10),
+  })
+
+  type FormValues = z.infer<typeof formSchema>
+
+  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: { guests: 1 }
+  })
 
   if (!event) {
     return (
@@ -43,19 +57,6 @@ export default function EventDetailClient({ event }: { event: any }) {
     if (location.isOnline) return 'Online Event';
     return location.venueName || location.city || location.address || 'Moscow HQ';
   }
-
-  const formSchema = z.object({
-    name: z.string().min(2, "Name is required"),
-    email: z.string().email("Valid email is required"),
-    guests: z.number().min(1).max(10),
-  })
-
-  type FormValues = z.infer<typeof formSchema>
-
-  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: { guests: 1 }
-  })
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true)
@@ -120,7 +121,7 @@ export default function EventDetailClient({ event }: { event: any }) {
                 <>
                   <h3 className="font-display text-xl font-bold text-text-primary mb-4">{t('detail.speakers')}</h3>
                   <ul className="list-disc pl-5 text-text-secondary space-y-2 mb-8">
-                    {event.speakers.map((speaker: any, idx: number) => (
+                    {event.speakers.map((speaker: { name: string; title?: string }, idx: number) => (
                       <li key={idx}>{speaker.name} {speaker.title ? `- ${speaker.title}` : ''}</li>
                     ))}
                   </ul>

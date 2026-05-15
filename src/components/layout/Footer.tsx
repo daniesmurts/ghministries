@@ -2,6 +2,7 @@
 import { Send } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
+import Image from "next/image"
 
 export function Footer() {
   const t = useTranslations('Footer')
@@ -15,9 +16,11 @@ export function Footer() {
           <div className="lg:col-span-2 flex flex-col space-y-6">
             <Link href="/" className="flex items-center space-x-4">
               <div className="relative h-14 w-14">
-                <img
+                <Image
                   src="/logo-white.png"
                   alt="Great Harvest Ministries Logo"
+                  width={56}
+                  height={56}
                   className="h-full w-full object-contain mix-blend-screen"
                 />
               </div>
