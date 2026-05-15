@@ -8,7 +8,7 @@ import EventsClient from "./EventsClient"
 
 export const revalidate = 3600 // Revalidate every hour
 
-export default async function EventsPage({ params }: { params: { locale: string } }) {
+export default async function EventsPage() {
   const t = await getTranslations('EventsPage')
   
   // Fetch real events from Sanity

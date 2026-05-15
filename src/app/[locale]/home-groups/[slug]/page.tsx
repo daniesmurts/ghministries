@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react"
 import { useTranslations } from "next-intl"
-import { ArrowLeft, MapPin, Calendar, Globe, Clock, User } from "lucide-react"
+import { ArrowLeft, MapPin, Calendar, Globe, Clock } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/Input"
 import { Link } from "@/i18n/routing"
 import { Avatar, AvatarFallback } from "@/components/ui/Avatar"
 
-export default function HomeGroupDetailPage({ params }: { params: { slug: string } }) {
+export default function HomeGroupDetailPage() {
   const t = useTranslations('HomeGroupsPage.detail')
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [isSuccess, setIsSuccess] = React.useState(false)
@@ -29,7 +29,7 @@ export default function HomeGroupDetailPage({ params }: { params: { slug: string
     resolver: zodResolver(formSchema),
   })
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async () => {
     setIsSubmitting(true)
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -37,7 +37,7 @@ export default function HomeGroupDetailPage({ params }: { params: { slug: string
     setIsSuccess(true)
   }
 
-  // Mock data for this page based on slug
+  // Mock data for this page
   const group = {
     name: "City Center Young Adults",
     day: "Thursday",
@@ -47,7 +47,7 @@ export default function HomeGroupDetailPage({ params }: { params: { slug: string
     leader: "Alexey Volkov",
     description: "A vibrant community of young professionals and university students meeting weekly in the heart of Moscow. We focus on applying Kingdom principles to our careers, studies, and relationships.",
     leaderBio: "Alexey has been leading home groups for 5 years. He works as a software engineer and has a passion for discipleship and seeing young adults thrive in their God-given purpose."
-  }
+  } as const
 
   return (
     <div className="flex w-full flex-col bg-surface-base pb-24">

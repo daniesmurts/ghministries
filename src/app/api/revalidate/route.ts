@@ -1,16 +1,17 @@
+import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import { parseBody } from 'next-sanity/webhook'
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const { isValidSignature, body } = await parseBody(req, process.env.SANITY_WEBHOOK_SECRET)
     
     if (!isValidSignature) {
-      return new Response('Unauthorized', { status: 401 })
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 })
     }
 
     const type = body?._type
-    if (!type) return new Response('Bad Request', { status: 400 })
+    if (!type) return NextResponse.json({ message: 'Bad Request' }, { status: 400 })
 
     // Revalidate relevant paths based on document type
     if (type === 'sermon') revalidatePath('/media')
@@ -25,8 +26,9 @@ export async function POST(req: Request) {
     if (type === 'volunteerOpportunity') revalidatePath('/volunteering')
     if (type === 'jobOpportunity') revalidatePath('/opportunities')
 
-    return new Response('Revalidated', { status: 200 })
-  } catch (err: any) {
-    return new Response(err.message, { status: 500 })
+    return NextResponse.json({ revalidated: true, now: Date.now() })
+  } catch (err) {
+    const error = err as Error
+    return NextResponse.json({ message: error.message }, { status: 500 })
   }
 }

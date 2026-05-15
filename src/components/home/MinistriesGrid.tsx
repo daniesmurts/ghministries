@@ -44,7 +44,7 @@ const ministries = [
     icon: Video,
     href: "/media",
   },
-]
+] as const
 
 export function MinistriesGrid() {
   const t = useTranslations('MinistriesGrid')
@@ -65,7 +65,7 @@ export function MinistriesGrid() {
             const Icon = ministry.icon
             return (
               <AnimatedStaggerItem key={index}>
-                <Link href={ministry.href as any} className="block h-full outline-none">
+                <Link href={ministry.href} className="block h-full outline-none">
                   <Card className="group relative h-full flex flex-col p-8 overflow-hidden border-border transition-all duration-300 hover:shadow-elevated hover:-translate-y-1">
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent-purple opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     

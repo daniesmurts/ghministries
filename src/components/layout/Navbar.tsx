@@ -53,7 +53,7 @@ const navLinks = [
   { name: "Global", href: "/global" },
   { name: "Events Calendar", href: "/events" },
   { name: "Contact", href: "/contact" },
-]
+] as const
 
 export function Navbar() {
   const pathname = usePathname()
@@ -71,12 +71,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Close mobile menu on path change
-  React.useEffect(() => {
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false)
-    }
-  }, [pathname, mobileMenuOpen])
+  const closeMobileMenu = () => setMobileMenuOpen(false)
 
   return (
     <>
@@ -117,23 +112,23 @@ export function Navbar() {
               <div
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
-                onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
+                onMouseEnter={() => 'dropdown' in link && setActiveDropdown(link.name)}
+                onMouseLeave={() => 'dropdown' in link && setActiveDropdown(null)}
               >
-                {link.dropdown ? (
+                {'dropdown' in link ? (
                   <button className="flex items-center space-x-1 py-4 text-sm font-medium text-text-primary transition-colors hover:text-accent-purple focus-visible:outline-none whitespace-nowrap">
-                    <span>{t(link.name as any)}</span>
+                    <span>{t(link.name as Parameters<typeof t>[0])}</span>
                     <ChevronDown className="h-4 w-4 opacity-50 flex-shrink-0" />
                   </button>
                 ) : (
                   <Link
-                    href={link.href!}
+                    href={link.href}
                     className={cn(
                       "relative py-4 text-sm font-medium transition-colors hover:text-accent-purple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-purple rounded-sm whitespace-nowrap",
                       pathname === link.href ? "text-accent-purple" : "text-text-primary"
                     )}
                   >
-                    {t(link.name as any)}
+                    {t(link.name as Parameters<typeof t>[0])}
                     {pathname === link.href && (
                       <motion.div
                         layoutId="nav-indicator"
@@ -145,8 +140,7 @@ export function Navbar() {
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
-                {link.dropdown && (
+                {'dropdown' in link && (
                   <AnimatePresence>
                     {activeDropdown === link.name && (
                       <motion.div
@@ -162,7 +156,7 @@ export function Navbar() {
                             href={subLink.href}
                             className="block px-4 py-2 text-sm text-text-primary hover:bg-surface-subtle hover:text-accent-purple"
                           >
-                            {t(subLink.name as any)}
+                            {t(subLink.name as Parameters<typeof t>[0])}
                           </Link>
                         ))}
                       </motion.div>
@@ -229,14 +223,14 @@ export function Navbar() {
             className="fixed inset-0 z-[60] flex flex-col bg-surface-elevated px-6 py-6"
           >
             <div className="flex items-center justify-between mb-12">
-            <Link href="/" className="flex items-center space-x-3" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" className="flex items-center space-x-3" onClick={closeMobileMenu}>
               <div className="relative h-10 w-10">
                 <Image
                   src="/logo.png"
                   alt="Great Harvest Ministries Logo"
                   width={40}
                   height={40}
-                  className="h-full w-full object-contain mix-blend-multiply"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="flex flex-col -space-y-1">
@@ -249,7 +243,7 @@ export function Navbar() {
               </div>
             </Link>
               <button
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
                 className="p-2 text-text-primary hover:bg-surface-subtle rounded-md"
               >
                 <X className="h-6 w-6" />
@@ -259,30 +253,32 @@ export function Navbar() {
             <nav className="flex flex-col space-y-6 overflow-y-auto pb-24">
               {navLinks.map((link) => (
                 <div key={link.name}>
-                  {link.dropdown ? (
+                  {'dropdown' in link ? (
                     <div className="space-y-4">
-                      <div className="text-2xl font-bold text-text-secondary">{t(link.name as any)}</div>
+                      <div className="text-2xl font-bold text-text-secondary">{t(link.name as Parameters<typeof t>[0])}</div>
                       <div className="flex flex-col space-y-4 pl-4 border-l-2 border-border">
                         {link.dropdown.map((subLink) => (
                           <Link
                             key={subLink.name}
                             href={subLink.href}
+                            onClick={closeMobileMenu}
                             className="text-xl font-semibold text-text-primary"
                           >
-                            {t(subLink.name as any)}
+                            {t(subLink.name as Parameters<typeof t>[0])}
                           </Link>
                         ))}
                       </div>
                     </div>
                   ) : (
                     <Link
-                      href={link.href!}
+                      href={link.href}
+                      onClick={closeMobileMenu}
                       className={cn(
                         "text-2xl font-bold",
                         pathname === link.href ? "text-accent-purple" : "text-text-primary"
                       )}
                     >
-                      {t(link.name as any)}
+                      {t(link.name as Parameters<typeof t>[0])}
                     </Link>
                   )}
                 </div>
@@ -294,7 +290,7 @@ export function Navbar() {
                  <LanguageToggle />
               </div>
               <Button variant="primary" size="lg" className="w-full text-lg" asChild>
-                <Link href="/giving" onClick={() => setMobileMenuOpen(false)}>{t('Give Now')}</Link>
+                <Link href="/giving" onClick={closeMobileMenu}>{t('Give Now')}</Link>
               </Button>
             </div>
           </motion.div>

@@ -24,7 +24,7 @@ export default function EventsClient({ events }: { events: SanityEvent[] }) {
     }
   }
 
-  const getLocationString = (location: any) => {
+  const getLocationString = (location: SanityEvent['location']) => {
     if (!location) return 'Moscow HQ';
     if (typeof location === 'string') return location;
     if (location.isOnline) return 'Online Event';
@@ -186,9 +186,7 @@ export default function EventsClient({ events }: { events: SanityEvent[] }) {
                       <span className={cn(
                         "inline-flex h-7 w-7 items-center justify-center text-sm font-bold rounded-full mb-1",
                         isToday ? "bg-accent-purple text-white" : "text-text-secondary"
-                      )}>
-                        {day}
-                      </span>
+                      )}>{day}</span>
                       <div className="flex flex-col gap-1 mt-1">
                         {dayEvents.map(event => (
                           <Link 

@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl"
 import { Search, Play, Headphones, FolderOpen } from "lucide-react"
 import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { Input } from "@/components/ui/Input"
 import { Badge } from "@/components/ui/Badge"
 import { Link } from "@/i18n/routing"
 import { cn } from "@/lib/utils"
@@ -65,7 +64,7 @@ const MOCK_MEDIA = [
     series: "Stand Alone",
     type: "audio",
   },
-]
+] as const
 
 export default function MediaLibraryPage() {
   const t = useTranslations('MediaPage')
@@ -153,7 +152,7 @@ export default function MediaLibraryPage() {
           <AnimatedStaggerGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredMedia.map((item) => (
               <AnimatedStaggerItem key={item.slug}>
-                <Link href={`/media/${item.slug}` as any} className="group block h-full outline-none">
+                <Link href={`/media/${item.slug}`} className="group block h-full outline-none">
                   <div className="relative aspect-video w-full overflow-hidden bg-surface-subtle rounded-xl mb-4">
                     <div className="absolute inset-0 bg-surface-subtle transition-transform duration-500 group-hover:scale-105" />
                     

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { Users, Clock, Lightbulb, MapPin, Search } from "lucide-react"
+import { Users, Clock, Lightbulb } from "lucide-react"
 import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Card } from "@/components/ui/Card"
@@ -64,14 +64,14 @@ const MOCK_ROLES = [
     skills: ["Detail-oriented", "Computer literacy", "Reliable"],
     description: "Assist our administrative team with weekly data entry and record keeping. Can be done remotely."
   }
-]
+] as const
 
 export default function VolunteeringPage() {
   const t = useTranslations('VolunteeringPage')
   
   const [filterArea, setFilterArea] = React.useState("All")
   const [filterCommitment, setFilterCommitment] = React.useState("All")
-  const [selectedRole, setSelectedRole] = React.useState<typeof MOCK_ROLES[0] | null>(null)
+  const [selectedRole, setSelectedRole] = React.useState<typeof MOCK_ROLES[number] | null>(null)
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [isSuccess, setIsSuccess] = React.useState(false)
 

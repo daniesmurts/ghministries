@@ -9,14 +9,14 @@ export default function BeliefsPage() {
   const t = useTranslations('BeliefsPage')
   const [activeSection, setActiveSection] = React.useState<string>("bible")
 
-  const sections = [
+  const sections = React.useMemo(() => [
     { id: "bible", title: t('sections.bible.title'), content: t('sections.bible.content') },
     { id: "trinity", title: t('sections.trinity.title'), content: t('sections.trinity.content') },
     { id: "salvation", title: t('sections.salvation.title'), content: t('sections.salvation.content') },
     { id: "holySpirit", title: t('sections.holySpirit.title'), content: t('sections.holySpirit.content') },
     { id: "church", title: t('sections.church.title'), content: t('sections.church.content') },
     { id: "eschatology", title: t('sections.eschatology.title'), content: t('sections.eschatology.content') },
-  ]
+  ], [t])
 
   React.useEffect(() => {
     const handleScroll = () => {

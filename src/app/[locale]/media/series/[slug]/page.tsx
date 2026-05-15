@@ -37,9 +37,9 @@ const MOCK_SERIES = {
       type: "video",
     }
   ]
-}
+} as const
 
-export default function SeriesDetailPage({ params }: { params: { slug: string } }) {
+export default function SeriesDetailPage() {
   const t = useTranslations('MediaPage')
 
   return (
@@ -78,7 +78,7 @@ export default function SeriesDetailPage({ params }: { params: { slug: string } 
         <AnimatedStaggerGroup className="flex flex-col space-y-6">
           {MOCK_SERIES.sermons.map((sermon, index) => (
             <AnimatedStaggerItem key={sermon.slug}>
-              <Link href={`/media/${sermon.slug}` as any} className="group block outline-none">
+              <Link href={`/media/${sermon.slug}`} className="group block outline-none">
                 <div className="flex flex-col sm:flex-row bg-surface-base border border-border rounded-xl overflow-hidden hover:shadow-elevated hover:border-accent-purple transition-all duration-300">
                   <div className="relative w-full sm:w-64 aspect-video sm:aspect-auto bg-surface-subtle shrink-0">
                     <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">

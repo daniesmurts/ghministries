@@ -1,11 +1,10 @@
 "use client"
 import * as React from "react"
 import { useTranslations } from "next-intl"
-import { MapPin, User, Clock, Search, ExternalLink, Globe2 } from "lucide-react"
-import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
+import { MapPin, User, Clock, Search, Globe2 } from "lucide-react"
+import { AnimatedSection } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Input } from "@/components/ui/Input"
-import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Badge } from "@/components/ui/Badge"
 import { Link } from "@/i18n/routing"
@@ -87,11 +86,13 @@ export default function GlobalPage() {
 
   // Simulated map projection logic for the placeholder
   // A very rough projection mapping lat/lng to percentages
+  /* 
   const getMapPosition = (lng: number, lat: number) => {
     const x = (lng + 180) * (100 / 360)
     const y = (90 - lat) * (100 / 180)
     return { left: `${x}%`, top: `${y}%` }
   }
+  */
 
   return (
     <div className="flex w-full flex-col pb-24 bg-surface-subtle">

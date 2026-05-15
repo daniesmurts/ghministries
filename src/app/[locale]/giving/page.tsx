@@ -2,7 +2,7 @@
 import * as React from "react"
 import { useTranslations, useLocale } from "next-intl"
 import { Lock, FileCheck, Landmark, ChevronDown } from "lucide-react"
-import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
+import { AnimatedSection } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"

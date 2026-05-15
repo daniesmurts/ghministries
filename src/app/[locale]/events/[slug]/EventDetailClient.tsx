@@ -51,7 +51,7 @@ export default function EventDetailClient({ event }: { event: SanityEvent }) {
   const dateStr = startDate.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
   const timeStr = `${startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} - ${endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
 
-  const getLocationString = (location: any) => {
+  const getLocationString = (location: SanityEvent['location']) => {
     if (!location) return 'Moscow HQ';
     if (typeof location === 'string') return location;
     if (location.isOnline) return 'Online Event';

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button"
 import { Badge } from "@/components/ui/Badge"
 import { Link } from "@/i18n/routing"
 
-export default function MediaDetailPage({ params }: { params: { slug: string } }) {
+export default function MediaDetailPage() {
   const t = useTranslations('MediaPage.detail')
 
   // Mock data based on slug
@@ -92,7 +92,7 @@ export default function MediaDetailPage({ params }: { params: { slug: string } }
               </Button>
               
               <h3 className="font-semibold text-text-primary mb-4 text-sm uppercase tracking-wider">{t('series')}</h3>
-              <Link href={`/media/series/${sermon.series.toLowerCase().replace(/ /g, '-')}` as any} className="group block">
+              <Link href={`/media/series/${sermon.series.toLowerCase().replace(/ /g, '-')}`} className="group block">
                 <div className="flex items-center space-x-4">
                   <div className="h-16 w-16 bg-surface-elevated rounded-lg border border-border flex items-center justify-center text-accent-purple group-hover:border-accent-purple transition-colors">
                     <ListVideo className="h-6 w-6" />

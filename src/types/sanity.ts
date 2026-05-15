@@ -13,6 +13,7 @@ export interface SanityImage {
     _type: 'reference';
   };
   alt?: string;
+  caption?: string;
 }
 
 export interface SanityReference {
@@ -23,7 +24,7 @@ export interface SanityReference {
 export type SanityBlock = {
   _key: string;
   _type: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export interface SanityEvent extends SanityDocument {
@@ -31,11 +32,17 @@ export interface SanityEvent extends SanityDocument {
   slug: { current: string };
   startDateTime: string;
   endDateTime?: string;
-  description?: any;
-  body?: any;
-  coverImage?: any;
+  description?: string | SanityBlock[];
+  body?: SanityBlock[];
+  coverImage?: SanityImage;
   type?: string;
-  location?: any;
+  location?: {
+    venueName?: string;
+    city?: string;
+    address?: string;
+    isOnline?: boolean;
+    coordinates?: { lat: number; lng: number };
+  };
   speakers?: Array<{
     name: string;
     title?: string;
@@ -48,21 +55,26 @@ export interface SanitySermon extends SanityDocument {
   speaker: string;
   date: string;
   duration?: string;
-  thumbnail?: any;
+  thumbnail?: SanityImage;
   videoUrl?: string;
   audioUrl?: string;
   series?: SanityReference;
-  body?: any;
+  body?: SanityBlock[];
 }
 
 export interface SanityLeader extends SanityDocument {
   name: string;
   role: string;
-  bio?: any;
-  image?: any;
-  socials?: {
+  title: string; // Added from component usage
+  tier: 'global' | 'executive'; // Added from component usage
+  shortBio?: string;
+  fullBio?: SanityBlock[];
+  photo?: string; // URL from Sanity (usually projected)
+  image?: SanityImage;
+  socialLinks?: {
     instagram?: string;
     twitter?: string;
     facebook?: string;
+    [key: string]: string | undefined;
   };
 }

@@ -16,8 +16,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <AnimatedSection>
           <SectionHeader
             eyebrow={t('Eyebrow')}
-            heading={t(serviceKey as any)}
-            subtext={t(`${serviceKey}Description` as any)}
+            heading={t(serviceKey as Parameters<typeof t>[0])}
+            subtext={t(`${serviceKey}Description` as Parameters<typeof t>[0])}
             align="center"
           />
         </AnimatedSection>
@@ -25,7 +25,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <AnimatedSection delay={0.2}>
           <div className="mt-16 max-w-3xl mx-auto prose prose-neutral prose-lg">
             <p className="text-text-secondary leading-relaxed">
-              {t(`${serviceKey}LongDescription` as any)}
+              {t(`${serviceKey}LongDescription` as Parameters<typeof t>[0])}
             </p>
             
             <div className="mt-12 p-8 bg-surface-subtle rounded-xl border border-border">

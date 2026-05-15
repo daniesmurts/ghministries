@@ -11,7 +11,7 @@ import { Card } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
-import { Modal, ModalTrigger, ModalContent, ModalHeader, ModalTitle, ModalDescription } from "@/components/ui/Modal"
+import { Modal, ModalTrigger, ModalContent, ModalHeader, ModalTitle } from "@/components/ui/Modal"
 import { cn } from "@/lib/utils"
 
 // Mock Data
@@ -93,13 +93,13 @@ const MOCK_OPPORTUNITIES = [
       "Pastoral heart for digital congregants"
     ]
   }
-]
+] as const
 
 export default function OpportunitiesPage() {
   const t = useTranslations('OpportunitiesPage')
   
   const [activeTab, setActiveTab] = React.useState<"jobs" | "internships" | "apprenticeships">("jobs")
-  const [selectedRole, setSelectedRole] = React.useState<typeof MOCK_OPPORTUNITIES[0] | null>(null)
+  const [selectedRole, setSelectedRole] = React.useState<typeof MOCK_OPPORTUNITIES[number] | null>(null)
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [isSuccess, setIsSuccess] = React.useState(false)
 

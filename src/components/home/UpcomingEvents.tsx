@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
+import { SanityEvent } from "@/types/sanity"
 
-export function UpcomingEvents({ events = [] }: { events?: any[] }) {
+export function UpcomingEvents({ events = [] }: { events?: SanityEvent[] }) {
   const t = useTranslations('UpcomingEvents')
 
   const formatDate = (dateString: string) => {
@@ -18,7 +19,7 @@ export function UpcomingEvents({ events = [] }: { events?: any[] }) {
     }
   }
 
-  const getLocationString = (location: any) => {
+  const getLocationString = (location: SanityEvent['location']) => {
     if (!location) return 'Moscow HQ';
     if (typeof location === 'string') return location;
     if (location.isOnline) return 'Online Event';

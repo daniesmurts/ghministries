@@ -1,7 +1,6 @@
 "use client"
 import * as React from "react"
 import { AnimatedSection } from "@/components/ui/AnimatedSection"
-import { SectionHeader } from "@/components/ui/SectionHeader"
 import { useTranslations } from "next-intl"
 
 export function WelcomeSection() {

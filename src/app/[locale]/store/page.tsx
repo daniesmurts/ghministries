@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react"
 import { useTranslations, useLocale } from "next-intl"
-import { ShoppingBag, Star, BookOpen, MonitorPlay, Shirt } from "lucide-react"
+import { ShoppingBag, BookOpen, MonitorPlay, Shirt } from "lucide-react"
 import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Card } from "@/components/ui/Card"
@@ -67,7 +67,7 @@ const MOCK_PRODUCTS = [
     image: "bg-gradient-to-br from-teal-500 to-emerald-700",
     description: "Digital download of the complete 12-part teaching series on the Book of Acts, including study notes."
   }
-]
+] as const
 
 export default function StorePage() {
   const t = useTranslations('StorePage')
@@ -75,14 +75,13 @@ export default function StorePage() {
   const { addItem } = useCartStore()
   
   const [activeTab, setActiveTab] = React.useState<"all" | "books" | "media" | "apparel">("all")
-  const [selectedProduct, setSelectedProduct] = React.useState<typeof MOCK_PRODUCTS[0] | null>(null)
 
   const filteredProducts = MOCK_PRODUCTS.filter(p => activeTab === "all" || p.type === activeTab)
   
   const currencySymbol = locale === 'ru' ? '₽' : '$'
-  const getPrice = (product: typeof MOCK_PRODUCTS[0]) => locale === 'ru' ? product.price.ru : product.price.en
+  const getPrice = (product: typeof MOCK_PRODUCTS[number]) => locale === 'ru' ? product.price.ru : product.price.en
 
-  const handleAddToCart = (product: typeof MOCK_PRODUCTS[0]) => {
+  const handleAddToCart = (product: typeof MOCK_PRODUCTS[number]) => {
     addItem({
       id: product.id,
       title: product.title,

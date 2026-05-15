@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react"
 import { useTranslations } from "next-intl"
-import { Search, MapPin, Calendar, Globe, Users } from "lucide-react"
+import { Search, MapPin, Calendar, Globe } from "lucide-react"
 import { AnimatedSection, AnimatedStaggerGroup, AnimatedStaggerItem } from "@/components/ui/AnimatedSection"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Card } from "@/components/ui/Card"
@@ -61,7 +61,7 @@ const MOCK_GROUPS = [
     leader: "Michael Chen",
     capacity: "Waitlist",
   },
-]
+] as const
 
 export default function HomeGroupsPage() {
   const t = useTranslations('HomeGroupsPage')
@@ -156,7 +156,7 @@ export default function HomeGroupsPage() {
         <AnimatedStaggerGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredGroups.map((group) => (
             <AnimatedStaggerItem key={group.slug}>
-              <Link href={`/home-groups/${group.slug}` as any} className="block h-full outline-none">
+              <Link href={`/home-groups/${group.slug}`} className="block h-full outline-none">
                 <Card hoverLift className="flex h-full flex-col p-6 cursor-pointer border-transparent transition-all duration-300 hover:border-accent-purple">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-display text-xl font-bold text-text-primary pr-4 line-clamp-2">

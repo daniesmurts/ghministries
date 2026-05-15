@@ -10,15 +10,16 @@ import { Card } from "@/components/ui/Card"
 import { Avatar, AvatarFallback } from "@/components/ui/Avatar"
 import { Modal, ModalTrigger, ModalContent, ModalHeader, ModalTitle, ModalDescription } from "@/components/ui/Modal"
 import { PortableText } from "@/components/ui/PortableText"
+import { SanityLeader } from "@/types/sanity"
 
 export const revalidate = 3600 // Revalidate every hour
 
-export default async function LeadershipPage({ params }: { params: { locale: string } }) {
+export default async function LeadershipPage() {
   const t = await getTranslations('LeadershipPage')
-  const leaders = await client.fetch(leadershipQuery)
+  const leaders: SanityLeader[] = await client.fetch(leadershipQuery)
 
-  const tier1Leaders = leaders.filter((l: any) => l.tier === 'global')
-  const tier2Leaders = leaders.filter((l: any) => l.tier === 'executive')
+  const tier1Leaders = leaders.filter((l) => l.tier === 'global')
+  const tier2Leaders = leaders.filter((l) => l.tier === 'executive')
 
   return (
     <div className="flex w-full flex-col pb-24">
@@ -48,7 +49,7 @@ export default async function LeadershipPage({ params }: { params: { locale: str
             </AnimatedSection>
 
             <div className="space-y-24">
-              {tier1Leaders.map((leader: any) => (
+              {tier1Leaders.map((leader) => (
                 <AnimatedSection key={leader._id}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     {/* Image Container */}
@@ -84,10 +85,10 @@ export default async function LeadershipPage({ params }: { params: { locale: str
                       
                       {leader.socialLinks && (
                         <div className="flex items-center space-x-4 pt-6 border-t border-border">
-                          {Object.entries(leader.socialLinks).map(([platform, url]: [string, any]) => url && (
+                          {Object.entries(leader.socialLinks).map(([platform, url]) => url && (
                             <a 
                               key={platform}
-                              href={url} 
+                              href={url as string} 
                               target="_blank" 
                               rel="noopener noreferrer"
                               className="h-10 w-10 rounded-full bg-surface-subtle flex items-center justify-center text-text-tertiary hover:bg-accent-purple-10 hover:text-accent-purple transition-all"
@@ -118,7 +119,7 @@ export default async function LeadershipPage({ params }: { params: { locale: str
             </AnimatedSection>
 
             <AnimatedStaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {tier2Leaders.map((leader: any) => (
+              {tier2Leaders.map((leader) => (
                 <AnimatedStaggerItem key={leader._id}>
                   <Modal>
                     <ModalTrigger asChild>
