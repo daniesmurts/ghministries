@@ -9,8 +9,12 @@ import { MinistriesGrid } from "@/components/home/MinistriesGrid"
 import { GlobalTeaser } from "@/components/home/GlobalTeaser"
 import { Testimonials } from "@/components/home/Testimonials"
 import { Newsletter } from "@/components/home/Newsletter"
+import { client } from "@/sanity/lib/client"
+import { upcomingEventsQuery } from "@/sanity/lib/queries"
 
-export default function Home() {
+export default async function Home() {
+  const upcomingEvents = await client.fetch(upcomingEventsQuery)
+
   return (
     <div className="flex flex-col items-center w-full">
       <HeroSection />
@@ -19,7 +23,7 @@ export default function Home() {
       <VisionSnapshot />
       <ServiceTimes />
       <LatestSermons />
-      <UpcomingEvents />
+      <UpcomingEvents events={upcomingEvents} />
       <MinistriesGrid />
       <GlobalTeaser />
       <Testimonials />

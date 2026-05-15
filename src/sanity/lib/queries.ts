@@ -66,6 +66,15 @@ export const allEventsQuery = groq`
   }
 `
 
+export const eventBySlugQuery = groq`
+  *[_type == "event" && slug.current == $slug][0] {
+    _id, title, slug, type, startDateTime, endDateTime,
+    location, registrationUrl, isFeatured, tags, description, body,
+    "coverImage": coverImage.asset->url,
+    "speakers": speakers[]->{ name, title }
+  }
+`
+
 export const leadershipQuery = groq`
   *[_type == "leader" && isActive == true] | order(order asc) {
     _id, name, slug, title, tier, shortBio, fullBio, socialLinks,

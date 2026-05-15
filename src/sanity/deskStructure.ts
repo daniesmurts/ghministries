@@ -19,9 +19,7 @@ export const structure: StructureResolver = (S) =>
         ])
       ),
 
-      S.listItem().title('📅 Events').child(
-        S.documentTypeListItem('event')
-      ),
+      S.documentTypeListItem('event').title('📅 Events'),
 
       S.listItem().title('👥 People').child(
         S.list().id('people').title('People').items([
@@ -37,16 +35,12 @@ export const structure: StructureResolver = (S) =>
         ])
       ),
 
-      S.listItem().title('🛍 Store').child(
-        S.documentTypeListItem('storeProduct')
-      ),
+      S.documentTypeListItem('storeProduct').title('🛍 Store'),
 
       S.divider(),
 
       // ENGAGEMENT
-      S.listItem().title('🙏 Prayer Requests').child(
-        S.documentTypeListItem('prayerRequest')
-      ),
+      S.documentTypeListItem('prayerRequest').title('🙏 Prayer Requests'),
 
       S.listItem().title('🤝 Serve & Work').child(
         S.list().id('work').title('Serve & Work').items([
@@ -58,7 +52,5 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
 
       // EDITORIAL
-      S.listItem().title('📄 Pages').child(
-        S.documentTypeListItem('page')
-      ),
+      S.documentTypeListItem('page').title('📄 Pages'),
     ])
